@@ -7,21 +7,17 @@
 
 import SwiftUI
 
+
+
+
+
 struct ContentView: View {
     var body: some View {
-        
-        
-        
+    
         NavigationView{
-            //Text("Login")
-//                .padding().navigationBarTitle("Animal Sounds", displayMode: .automatic)
-//                .font(.title)
-//                .foregroundColor(.blue)
             
             pageOne().navigationBarTitle("Page One", displayMode: .inline)
         }
-        
-        
         
     }
 }
@@ -35,8 +31,6 @@ struct ContentView_Previews: PreviewProvider {
 }
 
 
-
-
 struct pageOne: View{
     var body: some View{
         
@@ -45,6 +39,7 @@ struct pageOne: View{
             NavigationLink(destination: pageTwo()){
                 Text("Go to page two")
             }
+
         }
     }
 }
@@ -68,9 +63,7 @@ struct pageThree: View{
         
         VStack{
             Text("Page three").navigationBarTitle("Page three")
-//            NavigationLink(destination: pageThree()){
-//                Text("Go to page two")
-//            }
+
         }
     }
 }
