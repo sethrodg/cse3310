@@ -3,30 +3,16 @@
 //  animalSounds
 //
 //  Created by Seth Rodgers on 3/19/21.
+//  TEAM 18
 //
 
 import SwiftUI
-import CoreGraphics
+//import CoreGraphics
 
 
-class GlobalVars: ObservableObject {
-    @Published var username = ""
-    @Published var password = ""
-}
 
 public var myUsername = ""
 public var myPassword = ""
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -52,9 +38,7 @@ struct ContentView_Previews: PreviewProvider {
 //PAGE ONE
 struct pageOne: View{
     
-    @ObservedObject var globalVar = GlobalVars()
-    
-    
+
     @State var userInput: String = ""
     @State var passInput: String = ""
     
@@ -65,11 +49,8 @@ struct pageOne: View{
     @State var GoToView2:Bool = false
     @State var accountCreated:Bool = false
     
-
-    
     
     var body: some View{
-        
         
         
         VStack{
@@ -89,10 +70,7 @@ struct pageOne: View{
                 .background(Color(red: 230 / 255, green: 230 / 255, blue: 230 / 255))
                 .cornerRadius(8.0)
                 .padding()
-            
-            
-            
-            
+   
             
             NavigationLink(destination: {
                 VStack{
@@ -146,7 +124,7 @@ struct pageTwo: View{
     var body: some View{
         
         VStack{
-            Text("").navigationBarTitle("Home page")
+            Text("").navigationBarTitle("Home")
             
             NavigationLink(destination: pageThree()){
                 Text("Classification Page")
