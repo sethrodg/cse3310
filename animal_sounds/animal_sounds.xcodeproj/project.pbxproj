@@ -7,64 +7,66 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CE1517E726266B6600B3DEB9 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE1517E526266B6600B3DEB9 /* Model.xcdatamodeld */; };
-		CE1FDA5526056F98006059A4 /* animalSoundsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1FDA5426056F98006059A4 /* animalSoundsApp.swift */; };
-		CE1FDA5726056F98006059A4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1FDA5626056F98006059A4 /* ContentView.swift */; };
-		CE1FDA5926056F99006059A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE1FDA5826056F99006059A4 /* Assets.xcassets */; };
-		CE1FDA5C26056F99006059A4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE1FDA5B26056F99006059A4 /* Preview Assets.xcassets */; };
-		CE1FDA6726056F99006059A4 /* animalSoundsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1FDA6626056F99006059A4 /* animalSoundsTests.swift */; };
-		CE1FDA7226056F99006059A4 /* animalSoundsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1FDA7126056F99006059A4 /* animalSoundsUITests.swift */; };
+		CE1517F826266E7A00B3DEB9 /* animal_soundsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1517F726266E7A00B3DEB9 /* animal_soundsApp.swift */; };
+		CE1517FA26266E7A00B3DEB9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1517F926266E7A00B3DEB9 /* ContentView.swift */; };
+		CE1517FC26266E7C00B3DEB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE1517FB26266E7C00B3DEB9 /* Assets.xcassets */; };
+		CE1517FF26266E7C00B3DEB9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE1517FE26266E7C00B3DEB9 /* Preview Assets.xcassets */; };
+		CE15180126266E7C00B3DEB9 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE15180026266E7C00B3DEB9 /* Persistence.swift */; };
+		CE15180426266E7C00B3DEB9 /* animal_sounds.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE15180226266E7C00B3DEB9 /* animal_sounds.xcdatamodeld */; };
+		CE15180F26266E7C00B3DEB9 /* animal_soundsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE15180E26266E7C00B3DEB9 /* animal_soundsTests.swift */; };
+		CE15181A26266E7C00B3DEB9 /* animal_soundsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE15181926266E7C00B3DEB9 /* animal_soundsUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		CE1FDA6326056F99006059A4 /* PBXContainerItemProxy */ = {
+		CE15180B26266E7C00B3DEB9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = CE1FDA4926056F98006059A4 /* Project object */;
+			containerPortal = CE1517EC26266E7A00B3DEB9 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = CE1FDA5026056F98006059A4;
-			remoteInfo = animalSounds;
+			remoteGlobalIDString = CE1517F326266E7A00B3DEB9;
+			remoteInfo = animal_sounds;
 		};
-		CE1FDA6E26056F99006059A4 /* PBXContainerItemProxy */ = {
+		CE15181626266E7C00B3DEB9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = CE1FDA4926056F98006059A4 /* Project object */;
+			containerPortal = CE1517EC26266E7A00B3DEB9 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = CE1FDA5026056F98006059A4;
-			remoteInfo = animalSounds;
+			remoteGlobalIDString = CE1517F326266E7A00B3DEB9;
+			remoteInfo = animal_sounds;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CE1517E626266B6600B3DEB9 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		CE1FDA5126056F98006059A4 /* animalSounds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = animalSounds.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE1FDA5426056F98006059A4 /* animalSoundsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animalSoundsApp.swift; sourceTree = "<group>"; };
-		CE1FDA5626056F98006059A4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		CE1FDA5826056F99006059A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CE1FDA5B26056F99006059A4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		CE1FDA5D26056F99006059A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CE1FDA6226056F99006059A4 /* animalSoundsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = animalSoundsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE1FDA6626056F99006059A4 /* animalSoundsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animalSoundsTests.swift; sourceTree = "<group>"; };
-		CE1FDA6826056F99006059A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CE1FDA6D26056F99006059A4 /* animalSoundsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = animalSoundsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE1FDA7126056F99006059A4 /* animalSoundsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animalSoundsUITests.swift; sourceTree = "<group>"; };
-		CE1FDA7326056F99006059A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE1517F426266E7A00B3DEB9 /* animal_sounds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = animal_sounds.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE1517F726266E7A00B3DEB9 /* animal_soundsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animal_soundsApp.swift; sourceTree = "<group>"; };
+		CE1517F926266E7A00B3DEB9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CE1517FB26266E7C00B3DEB9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CE1517FE26266E7C00B3DEB9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CE15180026266E7C00B3DEB9 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		CE15180326266E7C00B3DEB9 /* animal_sounds.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = animal_sounds.xcdatamodel; sourceTree = "<group>"; };
+		CE15180526266E7C00B3DEB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE15180A26266E7C00B3DEB9 /* animal_soundsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = animal_soundsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE15180E26266E7C00B3DEB9 /* animal_soundsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animal_soundsTests.swift; sourceTree = "<group>"; };
+		CE15181026266E7C00B3DEB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE15181526266E7C00B3DEB9 /* animal_soundsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = animal_soundsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE15181926266E7C00B3DEB9 /* animal_soundsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animal_soundsUITests.swift; sourceTree = "<group>"; };
+		CE15181B26266E7C00B3DEB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		CE1FDA4E26056F98006059A4 /* Frameworks */ = {
+		CE1517F126266E7A00B3DEB9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CE1FDA5F26056F99006059A4 /* Frameworks */ = {
+		CE15180726266E7C00B3DEB9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CE1FDA6A26056F99006059A4 /* Frameworks */ = {
+		CE15181226266E7C00B3DEB9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -74,144 +76,145 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CE1FDA4826056F98006059A4 = {
+		CE1517EB26266E7A00B3DEB9 = {
 			isa = PBXGroup;
 			children = (
-				CE1517E526266B6600B3DEB9 /* Model.xcdatamodeld */,
-				CE1FDA5326056F98006059A4 /* animalSounds */,
-				CE1FDA6526056F99006059A4 /* animalSoundsTests */,
-				CE1FDA7026056F99006059A4 /* animalSoundsUITests */,
-				CE1FDA5226056F98006059A4 /* Products */,
+				CE1517F626266E7A00B3DEB9 /* animal_sounds */,
+				CE15180D26266E7C00B3DEB9 /* animal_soundsTests */,
+				CE15181826266E7C00B3DEB9 /* animal_soundsUITests */,
+				CE1517F526266E7A00B3DEB9 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		CE1FDA5226056F98006059A4 /* Products */ = {
+		CE1517F526266E7A00B3DEB9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CE1FDA5126056F98006059A4 /* animalSounds.app */,
-				CE1FDA6226056F99006059A4 /* animalSoundsTests.xctest */,
-				CE1FDA6D26056F99006059A4 /* animalSoundsUITests.xctest */,
+				CE1517F426266E7A00B3DEB9 /* animal_sounds.app */,
+				CE15180A26266E7C00B3DEB9 /* animal_soundsTests.xctest */,
+				CE15181526266E7C00B3DEB9 /* animal_soundsUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CE1FDA5326056F98006059A4 /* animalSounds */ = {
+		CE1517F626266E7A00B3DEB9 /* animal_sounds */ = {
 			isa = PBXGroup;
 			children = (
-				CE1FDA5426056F98006059A4 /* animalSoundsApp.swift */,
-				CE1FDA5626056F98006059A4 /* ContentView.swift */,
-				CE1FDA5826056F99006059A4 /* Assets.xcassets */,
-				CE1FDA5D26056F99006059A4 /* Info.plist */,
-				CE1FDA5A26056F99006059A4 /* Preview Content */,
+				CE1517F726266E7A00B3DEB9 /* animal_soundsApp.swift */,
+				CE1517F926266E7A00B3DEB9 /* ContentView.swift */,
+				CE1517FB26266E7C00B3DEB9 /* Assets.xcassets */,
+				CE15180026266E7C00B3DEB9 /* Persistence.swift */,
+				CE15180526266E7C00B3DEB9 /* Info.plist */,
+				CE15180226266E7C00B3DEB9 /* animal_sounds.xcdatamodeld */,
+				CE1517FD26266E7C00B3DEB9 /* Preview Content */,
 			);
-			path = animalSounds;
+			path = animal_sounds;
 			sourceTree = "<group>";
 		};
-		CE1FDA5A26056F99006059A4 /* Preview Content */ = {
+		CE1517FD26266E7C00B3DEB9 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				CE1FDA5B26056F99006059A4 /* Preview Assets.xcassets */,
+				CE1517FE26266E7C00B3DEB9 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		CE1FDA6526056F99006059A4 /* animalSoundsTests */ = {
+		CE15180D26266E7C00B3DEB9 /* animal_soundsTests */ = {
 			isa = PBXGroup;
 			children = (
-				CE1FDA6626056F99006059A4 /* animalSoundsTests.swift */,
-				CE1FDA6826056F99006059A4 /* Info.plist */,
+				CE15180E26266E7C00B3DEB9 /* animal_soundsTests.swift */,
+				CE15181026266E7C00B3DEB9 /* Info.plist */,
 			);
-			path = animalSoundsTests;
+			path = animal_soundsTests;
 			sourceTree = "<group>";
 		};
-		CE1FDA7026056F99006059A4 /* animalSoundsUITests */ = {
+		CE15181826266E7C00B3DEB9 /* animal_soundsUITests */ = {
 			isa = PBXGroup;
 			children = (
-				CE1FDA7126056F99006059A4 /* animalSoundsUITests.swift */,
-				CE1FDA7326056F99006059A4 /* Info.plist */,
+				CE15181926266E7C00B3DEB9 /* animal_soundsUITests.swift */,
+				CE15181B26266E7C00B3DEB9 /* Info.plist */,
 			);
-			path = animalSoundsUITests;
+			path = animal_soundsUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CE1FDA5026056F98006059A4 /* animalSounds */ = {
+		CE1517F326266E7A00B3DEB9 /* animal_sounds */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CE1FDA7626056F99006059A4 /* Build configuration list for PBXNativeTarget "animalSounds" */;
+			buildConfigurationList = CE15181E26266E7C00B3DEB9 /* Build configuration list for PBXNativeTarget "animal_sounds" */;
 			buildPhases = (
-				CE1FDA4D26056F98006059A4 /* Sources */,
-				CE1FDA4E26056F98006059A4 /* Frameworks */,
-				CE1FDA4F26056F98006059A4 /* Resources */,
+				CE1517F026266E7A00B3DEB9 /* Sources */,
+				CE1517F126266E7A00B3DEB9 /* Frameworks */,
+				CE1517F226266E7A00B3DEB9 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = animalSounds;
-			productName = animalSounds;
-			productReference = CE1FDA5126056F98006059A4 /* animalSounds.app */;
+			name = animal_sounds;
+			productName = animal_sounds;
+			productReference = CE1517F426266E7A00B3DEB9 /* animal_sounds.app */;
 			productType = "com.apple.product-type.application";
 		};
-		CE1FDA6126056F99006059A4 /* animalSoundsTests */ = {
+		CE15180926266E7C00B3DEB9 /* animal_soundsTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CE1FDA7926056F99006059A4 /* Build configuration list for PBXNativeTarget "animalSoundsTests" */;
+			buildConfigurationList = CE15182126266E7C00B3DEB9 /* Build configuration list for PBXNativeTarget "animal_soundsTests" */;
 			buildPhases = (
-				CE1FDA5E26056F99006059A4 /* Sources */,
-				CE1FDA5F26056F99006059A4 /* Frameworks */,
-				CE1FDA6026056F99006059A4 /* Resources */,
+				CE15180626266E7C00B3DEB9 /* Sources */,
+				CE15180726266E7C00B3DEB9 /* Frameworks */,
+				CE15180826266E7C00B3DEB9 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				CE1FDA6426056F99006059A4 /* PBXTargetDependency */,
+				CE15180C26266E7C00B3DEB9 /* PBXTargetDependency */,
 			);
-			name = animalSoundsTests;
-			productName = animalSoundsTests;
-			productReference = CE1FDA6226056F99006059A4 /* animalSoundsTests.xctest */;
+			name = animal_soundsTests;
+			productName = animal_soundsTests;
+			productReference = CE15180A26266E7C00B3DEB9 /* animal_soundsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		CE1FDA6C26056F99006059A4 /* animalSoundsUITests */ = {
+		CE15181426266E7C00B3DEB9 /* animal_soundsUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CE1FDA7C26056F99006059A4 /* Build configuration list for PBXNativeTarget "animalSoundsUITests" */;
+			buildConfigurationList = CE15182426266E7C00B3DEB9 /* Build configuration list for PBXNativeTarget "animal_soundsUITests" */;
 			buildPhases = (
-				CE1FDA6926056F99006059A4 /* Sources */,
-				CE1FDA6A26056F99006059A4 /* Frameworks */,
-				CE1FDA6B26056F99006059A4 /* Resources */,
+				CE15181126266E7C00B3DEB9 /* Sources */,
+				CE15181226266E7C00B3DEB9 /* Frameworks */,
+				CE15181326266E7C00B3DEB9 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				CE1FDA6F26056F99006059A4 /* PBXTargetDependency */,
+				CE15181726266E7C00B3DEB9 /* PBXTargetDependency */,
 			);
-			name = animalSoundsUITests;
-			productName = animalSoundsUITests;
-			productReference = CE1FDA6D26056F99006059A4 /* animalSoundsUITests.xctest */;
+			name = animal_soundsUITests;
+			productName = animal_soundsUITests;
+			productReference = CE15181526266E7C00B3DEB9 /* animal_soundsUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		CE1FDA4926056F98006059A4 /* Project object */ = {
+		CE1517EC26266E7A00B3DEB9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
-					CE1FDA5026056F98006059A4 = {
+					CE1517F326266E7A00B3DEB9 = {
 						CreatedOnToolsVersion = 12.4;
 					};
-					CE1FDA6126056F99006059A4 = {
+					CE15180926266E7C00B3DEB9 = {
 						CreatedOnToolsVersion = 12.4;
-						TestTargetID = CE1FDA5026056F98006059A4;
+						TestTargetID = CE1517F326266E7A00B3DEB9;
 					};
-					CE1FDA6C26056F99006059A4 = {
+					CE15181426266E7C00B3DEB9 = {
 						CreatedOnToolsVersion = 12.4;
-						TestTargetID = CE1FDA5026056F98006059A4;
+						TestTargetID = CE1517F326266E7A00B3DEB9;
 					};
 				};
 			};
-			buildConfigurationList = CE1FDA4C26056F98006059A4 /* Build configuration list for PBXProject "animalSounds" */;
+			buildConfigurationList = CE1517EF26266E7A00B3DEB9 /* Build configuration list for PBXProject "animal_sounds" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -219,36 +222,36 @@
 				en,
 				Base,
 			);
-			mainGroup = CE1FDA4826056F98006059A4;
-			productRefGroup = CE1FDA5226056F98006059A4 /* Products */;
+			mainGroup = CE1517EB26266E7A00B3DEB9;
+			productRefGroup = CE1517F526266E7A00B3DEB9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CE1FDA5026056F98006059A4 /* animalSounds */,
-				CE1FDA6126056F99006059A4 /* animalSoundsTests */,
-				CE1FDA6C26056F99006059A4 /* animalSoundsUITests */,
+				CE1517F326266E7A00B3DEB9 /* animal_sounds */,
+				CE15180926266E7C00B3DEB9 /* animal_soundsTests */,
+				CE15181426266E7C00B3DEB9 /* animal_soundsUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		CE1FDA4F26056F98006059A4 /* Resources */ = {
+		CE1517F226266E7A00B3DEB9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE1FDA5C26056F99006059A4 /* Preview Assets.xcassets in Resources */,
-				CE1FDA5926056F99006059A4 /* Assets.xcassets in Resources */,
+				CE1517FF26266E7C00B3DEB9 /* Preview Assets.xcassets in Resources */,
+				CE1517FC26266E7C00B3DEB9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CE1FDA6026056F99006059A4 /* Resources */ = {
+		CE15180826266E7C00B3DEB9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CE1FDA6B26056F99006059A4 /* Resources */ = {
+		CE15181326266E7C00B3DEB9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -258,49 +261,50 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		CE1FDA4D26056F98006059A4 /* Sources */ = {
+		CE1517F026266E7A00B3DEB9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE1FDA5726056F98006059A4 /* ContentView.swift in Sources */,
-				CE1FDA5526056F98006059A4 /* animalSoundsApp.swift in Sources */,
-				CE1517E726266B6600B3DEB9 /* Model.xcdatamodeld in Sources */,
+				CE15180126266E7C00B3DEB9 /* Persistence.swift in Sources */,
+				CE1517FA26266E7A00B3DEB9 /* ContentView.swift in Sources */,
+				CE1517F826266E7A00B3DEB9 /* animal_soundsApp.swift in Sources */,
+				CE15180426266E7C00B3DEB9 /* animal_sounds.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CE1FDA5E26056F99006059A4 /* Sources */ = {
+		CE15180626266E7C00B3DEB9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE1FDA6726056F99006059A4 /* animalSoundsTests.swift in Sources */,
+				CE15180F26266E7C00B3DEB9 /* animal_soundsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CE1FDA6926056F99006059A4 /* Sources */ = {
+		CE15181126266E7C00B3DEB9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE1FDA7226056F99006059A4 /* animalSoundsUITests.swift in Sources */,
+				CE15181A26266E7C00B3DEB9 /* animal_soundsUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		CE1FDA6426056F99006059A4 /* PBXTargetDependency */ = {
+		CE15180C26266E7C00B3DEB9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CE1FDA5026056F98006059A4 /* animalSounds */;
-			targetProxy = CE1FDA6326056F99006059A4 /* PBXContainerItemProxy */;
+			target = CE1517F326266E7A00B3DEB9 /* animal_sounds */;
+			targetProxy = CE15180B26266E7C00B3DEB9 /* PBXContainerItemProxy */;
 		};
-		CE1FDA6F26056F99006059A4 /* PBXTargetDependency */ = {
+		CE15181726266E7C00B3DEB9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CE1FDA5026056F98006059A4 /* animalSounds */;
-			targetProxy = CE1FDA6E26056F99006059A4 /* PBXContainerItemProxy */;
+			target = CE1517F326266E7A00B3DEB9 /* animal_sounds */;
+			targetProxy = CE15181626266E7C00B3DEB9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		CE1FDA7426056F99006059A4 /* Debug */ = {
+		CE15181C26266E7C00B3DEB9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -361,7 +365,7 @@
 			};
 			name = Debug;
 		};
-		CE1FDA7526056F99006059A4 /* Release */ = {
+		CE15181D26266E7C00B3DEB9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -416,165 +420,163 @@
 			};
 			name = Release;
 		};
-		CE1FDA7726056F99006059A4 /* Debug */ = {
+		CE15181F26266E7C00B3DEB9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"animalSounds/Preview Content\"";
-				DEVELOPMENT_TEAM = U8WLZ76B67;
+				DEVELOPMENT_ASSET_PATHS = "\"animal_sounds/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = animalSounds/Info.plist;
+				INFOPLIST_FILE = animal_sounds/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = uta.edu.animalSounds;
+				PRODUCT_BUNDLE_IDENTIFIER = "uta.edu.animal-sounds";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		CE1FDA7826056F99006059A4 /* Release */ = {
+		CE15182026266E7C00B3DEB9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"animalSounds/Preview Content\"";
-				DEVELOPMENT_TEAM = U8WLZ76B67;
+				DEVELOPMENT_ASSET_PATHS = "\"animal_sounds/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = animalSounds/Info.plist;
+				INFOPLIST_FILE = animal_sounds/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = uta.edu.animalSounds;
+				PRODUCT_BUNDLE_IDENTIFIER = "uta.edu.animal-sounds";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
-		CE1FDA7A26056F99006059A4 /* Debug */ = {
+		CE15182226266E7C00B3DEB9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = animalSoundsTests/Info.plist;
+				INFOPLIST_FILE = animal_soundsTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = uta.edu.animalSoundsTests;
+				PRODUCT_BUNDLE_IDENTIFIER = "uta.edu.animal-soundsTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/animalSounds.app/animalSounds";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/animal_sounds.app/animal_sounds";
 			};
 			name = Debug;
 		};
-		CE1FDA7B26056F99006059A4 /* Release */ = {
+		CE15182326266E7C00B3DEB9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = animalSoundsTests/Info.plist;
+				INFOPLIST_FILE = animal_soundsTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = uta.edu.animalSoundsTests;
+				PRODUCT_BUNDLE_IDENTIFIER = "uta.edu.animal-soundsTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/animalSounds.app/animalSounds";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/animal_sounds.app/animal_sounds";
 			};
 			name = Release;
 		};
-		CE1FDA7D26056F99006059A4 /* Debug */ = {
+		CE15182526266E7C00B3DEB9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = animalSoundsUITests/Info.plist;
+				INFOPLIST_FILE = animal_soundsUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = uta.edu.animalSoundsUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = "uta.edu.animal-soundsUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = animalSounds;
+				TEST_TARGET_NAME = animal_sounds;
 			};
 			name = Debug;
 		};
-		CE1FDA7E26056F99006059A4 /* Release */ = {
+		CE15182626266E7C00B3DEB9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = animalSoundsUITests/Info.plist;
+				INFOPLIST_FILE = animal_soundsUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = uta.edu.animalSoundsUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = "uta.edu.animal-soundsUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = animalSounds;
+				TEST_TARGET_NAME = animal_sounds;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CE1FDA4C26056F98006059A4 /* Build configuration list for PBXProject "animalSounds" */ = {
+		CE1517EF26266E7A00B3DEB9 /* Build configuration list for PBXProject "animal_sounds" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CE1FDA7426056F99006059A4 /* Debug */,
-				CE1FDA7526056F99006059A4 /* Release */,
+				CE15181C26266E7C00B3DEB9 /* Debug */,
+				CE15181D26266E7C00B3DEB9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CE1FDA7626056F99006059A4 /* Build configuration list for PBXNativeTarget "animalSounds" */ = {
+		CE15181E26266E7C00B3DEB9 /* Build configuration list for PBXNativeTarget "animal_sounds" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CE1FDA7726056F99006059A4 /* Debug */,
-				CE1FDA7826056F99006059A4 /* Release */,
+				CE15181F26266E7C00B3DEB9 /* Debug */,
+				CE15182026266E7C00B3DEB9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CE1FDA7926056F99006059A4 /* Build configuration list for PBXNativeTarget "animalSoundsTests" */ = {
+		CE15182126266E7C00B3DEB9 /* Build configuration list for PBXNativeTarget "animal_soundsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CE1FDA7A26056F99006059A4 /* Debug */,
-				CE1FDA7B26056F99006059A4 /* Release */,
+				CE15182226266E7C00B3DEB9 /* Debug */,
+				CE15182326266E7C00B3DEB9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CE1FDA7C26056F99006059A4 /* Build configuration list for PBXNativeTarget "animalSoundsUITests" */ = {
+		CE15182426266E7C00B3DEB9 /* Build configuration list for PBXNativeTarget "animal_soundsUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CE1FDA7D26056F99006059A4 /* Debug */,
-				CE1FDA7E26056F99006059A4 /* Release */,
+				CE15182526266E7C00B3DEB9 /* Debug */,
+				CE15182626266E7C00B3DEB9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -582,17 +584,17 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		CE1517E526266B6600B3DEB9 /* Model.xcdatamodeld */ = {
+		CE15180226266E7C00B3DEB9 /* animal_sounds.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				CE1517E626266B6600B3DEB9 /* Model.xcdatamodel */,
+				CE15180326266E7C00B3DEB9 /* animal_sounds.xcdatamodel */,
 			);
-			currentVersion = CE1517E626266B6600B3DEB9 /* Model.xcdatamodel */;
-			path = Model.xcdatamodeld;
+			currentVersion = CE15180326266E7C00B3DEB9 /* animal_sounds.xcdatamodel */;
+			path = animal_sounds.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */
 	};
-	rootObject = CE1FDA4926056F98006059A4 /* Project object */;
+	rootObject = CE1517EC26266E7A00B3DEB9 /* Project object */;
 }

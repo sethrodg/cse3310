@@ -1,8 +1,8 @@
 //
 //  ContentView.swift
-//  animalSounds
+//  animal_sounds
 //
-//  Created by Seth Rodgers on 3/19/21.
+//  Created by Seth Rodgers on 4/13/21.
 //  TEAM 18
 //
 
@@ -13,6 +13,8 @@ import CoreData
 
 public var myUsername = ""
 public var myPassword = ""
+
+let persistenceController = PersistenceController.shared
 
 
 
