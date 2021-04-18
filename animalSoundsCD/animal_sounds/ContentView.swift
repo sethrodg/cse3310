@@ -11,6 +11,7 @@ import CoreData
 
 
 
+
 public var myUsername = ""
 public var myPassword = ""
 
@@ -21,9 +22,10 @@ let persistenceController = PersistenceController.shared
 
 struct ContentView: View {
     var body: some View {
+        
+        
     
         NavigationView{
-            
             pageOne().navigationBarTitle("Animal Sounds", displayMode: .inline)
         }
         
@@ -37,6 +39,29 @@ struct ContentView_Previews: PreviewProvider {
 }
 
 
+//FETCH CORE DATA USER INSTANCE
+//func fetchUser() -> [User]? {
+//
+//    let context = persistenceController.container.viewContext
+//    let fetchRequest = NSFetchRequest<User>(entityName: "User")
+//    //let details = try context.fetch(fetchRequest)
+//
+//    do {
+//        let details = try context.fetch(fetchRequest)
+//        return details
+//    } catch let fetchError {
+//        print("Failed to fetch companies: \(fetchError)")
+//    }
+//
+//    return nil
+//}
+
+
+
+
+
+
+
 //PAGE ONE
 struct pageOne: View{
     
@@ -44,16 +69,32 @@ struct pageOne: View{
     @State var userInput: String = ""
     @State var passInput: String = ""
     
-    @State var user: String = ""
-    @State var pass: String = ""
+//    @State var user: String = ""
+//    @State var pass: String = ""
+    @State private var user = UserDefaults.standard.string(forKey: "Username")
+    @State private var pass = UserDefaults.standard.string(forKey: "Password")
+    
+    
+    var userArray: [String] = []
+    var passArray: [String] = []
     
     var isLoggedin:Bool = false
     @State var GoToView2:Bool = false
     @State var accountCreated:Bool = false
     
     
+    //FETCH CORE DATA
+//    @FetchRequest(
+//            sortDescriptors: [NSSortDescriptor(keyPath: \User.username, ascending: true)],
+//            animation: .default)
+//        private var items: FetchedResults<User>
+
+
+
+    
     var body: some View{
         
+    
         
         VStack{
             
@@ -72,15 +113,33 @@ struct pageOne: View{
                 .background(Color(red: 230 / 255, green: 230 / 255, blue: 230 / 255))
                 .cornerRadius(8.0)
                 .padding()
-   
+            
+//            List {
+//                ForEach(items) { item in
+//                    Text("Item is \(item.password!)")
+//                    //userArray.append(item.password!)
+//                }
+//            }
+  
             
             NavigationLink(destination: {
                 VStack{
+                    
+                    
+                    //VALIDATE LOGIN LOCALLY
                     if user == userInput && pass == passInput && accountCreated {
                         pageTwo()
                     } else {
                         pageSeven()
                     }
+                    
+                   
+                    
+                 
+     
+
+                    
+                    
                 }
             }()) { // open ProjectsView only if the user clicked on the item "Projects" of the list etc..
                 Text("Login")
@@ -94,13 +153,56 @@ struct pageOne: View{
             
             Button(action: {
                 print("Button clicked")
-                user = userInput
-                pass = passInput
+//                user = userInput
+//                pass = passInput
                 
+                //VARIABLES FOR PROFILE PAGE
                 myUsername = userInput
                 myPassword = passInput
                 
+                
+                
+                print("User  \(String(describing: user))")
+                print("Pass  \(String(describing: pass))")
+                
+                print("User input \(userInput)")
+                print("Pass input \(passInput)")
+                
+                
+                
+                UserDefaults.standard.set(self.userInput, forKey: "Username")
+                UserDefaults.standard.set(self.passInput, forKey: "Password")
+                
+                user = UserDefaults.standard.string(forKey: "Username")
+                pass = UserDefaults.standard.string(forKey: "Password")
+                
                 accountCreated = true
+                
+                
+                
+
+                
+                //CORE DATA CDOE
+//                let context = persistenceController.container.viewContext
+//                let newUser = NSEntityDescription.insertNewObject(forEntityName: "User", into: context) as! User
+//
+//                newUser.username = myUsername
+//                newUser.password = myPassword
+//
+//                newUser.setValue(myUsername, forKey: "username")
+//                newUser.setValue(myPassword, forKey: "password")
+//
+//                do {
+//                    try context.save()
+//                    print("New user created")
+//                    //return newUser
+//                } catch let createError{
+//                    print("Failed to create: \(createError)")
+//                }
+                
+        
+                
+                
                 
             }) {
                 Text("Create Account")
