@@ -127,7 +127,7 @@ struct pageOne: View{
                     
                     
                     //VALIDATE LOGIN LOCALLY
-                    if user == userInput && pass == passInput && accountCreated {
+                    if user == userInput && pass == passInput {
                         pageTwo()
                     } else {
                         pageSeven()
