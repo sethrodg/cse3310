@@ -69,8 +69,7 @@ struct pageOne: View{
     @State var userInput: String = ""
     @State var passInput: String = ""
     
-//    @State var user: String = ""
-//    @State var pass: String = ""
+
     @State private var user = UserDefaults.standard.string(forKey: "Username")
     @State private var pass = UserDefaults.standard.string(forKey: "Password")
     
