@@ -361,7 +361,7 @@ struct pageThree: View{
             Button{
                 //perform the classification
                 }label:{
-                    ClassificationButtonView(title: "Perform Classification", imageName: "",backgroundColor: Color(.gray), textColor: Color(.black))
+                    ClassificationButtonView(title: "Perform Classification", imageName: " ",backgroundColor: Color(.gray), textColor: Color(.black))
                 }
             }
         }
@@ -415,19 +415,31 @@ struct pageFour: View{
         
         
         VStack{
-            Text("Profile Page").navigationBarTitle("Profile Page")
+            Image("swift-image")
+                .resizable()
+                .frame(width: 110, height:110)
+                .clipShape(Circle()) // Clip the image to a circle
+                .position(x: 192, y: 170)
+            
+            Text("User Profile").navigationBarTitle("Profile Page")
+                .frame(width: 200, height: 100, alignment: .top)
+                .position(x: 190.0, y: 150.0).foregroundColor(.blue)
+                .font(.largeTitle)
+            
             Text("Username: \(newU)")
-//                .padding()
-//                .frame(width: 300, height: 110, alignment: .center)
-//                .background(Color.blue)
-//                .foregroundColor(Color.white)
-//                .cornerRadius(40.0)
+                //.padding()
+                .frame(width: 300, height: 70, alignment: .center)
+                .background(Color.blue)
+                .foregroundColor(Color.white)
+                .cornerRadius(40.0)
+                .position(x: 192.0, y: 60.0).foregroundColor(.white)
             Text("Password: \(newP)")
                 //.padding()
-                //.frame(width: 300, height: 410, alignment: .center)
-                //.background(Color.blue)
-                //.foregroundColor(Color.white)
-                //.cornerRadius(40.0)
+                .frame(width: 300, height: 70, alignment: .center)
+                .background(Color.blue)
+                .foregroundColor(Color.white)
+                .cornerRadius(40.0)
+                .position(x: 192.0, y: 0.0).foregroundColor(.white)
 
         }
     }
