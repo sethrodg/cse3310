@@ -8,6 +8,7 @@
 
 import SwiftUI
 import CoreData
+import AVKit
 
 
 
@@ -275,13 +276,128 @@ struct pageTwo: View{
 //PAGE THREE - CLASSIFICATION PAGE
 struct pageThree: View{
     var body: some View{
-        
+
         VStack{
             Text("Classification Page").navigationBarTitle("Classification Page")
-            
+
         }
     }
 }
+
+
+
+
+//PAGE THREE - CLASSIFICATION PAGE
+//struct pageThree: View{
+//    @State var session: AVAudioSession!
+//    @State var AudioRecorder: AVAudioRecorder!
+//    @State var AudioPlayer : AVAudioPlayer!
+//
+//    @State var SoundFileName2: String = "ExampleSoundFileName.mp3"  //string should hold the sound file
+//    @State private var isRecording = false //when button clicked changes start recording to stop recordin
+//    @State var numberOfRecordings: Int = 0
+//    @State var Recordings : [URL] = []
+//
+//    var body: some View{
+//
+//
+//        NavigationView{
+//        VStack{
+//
+//            Text(SoundFileName2)
+//                .frame(width:350,height:20)
+//                .padding()
+//                .background(Color(red: 230 / 255, green: 230 / 255, blue: 230 / 255))//gives the gray color
+//                .font(.system(size:22,design:.default))
+//                .cornerRadius(8.0)
+//                .padding()
+//            Button {
+//
+//                if AudioRecorder == nil //checks if there current audio recordings happening
+//                {
+//                    numberOfRecordings += 1
+//                    //increment the numberOfRecordings
+//                    let SoundFileName = getDirectory().appendingPathComponent("AnimalSoundRecording\(numberOfRecordings).m4a")
+//                    let settings = [AVFormatIDKey: Int(kAudioFormatMPEG4AAC),AVSampleRateKey : 12000, AVNumberOfChannelsKey : 1 , AVEncoderAudioQualityKey : AVAudioQuality.high.rawValue ]
+//
+//                    do{
+//                        //Sound Recording will start
+//                        AudioRecorder = try AVAudioRecorder(url: SoundFileName, settings: settings)
+//                        AudioRecorder.record()
+//                        isRecording.toggle()
+//                    }catch{
+//                        print(error.localizedDescription)
+//
+//                    }
+//
+//                }
+//                else{
+//                    //Sound Recording will stop and be set to nil
+//                    AudioRecorder.stop()
+//                    AudioRecorder = nil
+//                    isRecording.toggle()
+//
+//                }
+//                //isRecording.toggle()
+//                }label:{
+//
+//
+//                    ClassificationButtonView(title: isRecording ? "Stop Recording": "Start Recording" , imageName: isRecording ? "stop.fill": "play.fill", backgroundColor: isRecording ? Color(.red): Color(.green),textColor: Color(.black))
+//
+//
+//
+//                }
+//
+//            Button{
+//                    playAudio()
+//                    //plays audio back
+//                }label:{
+//                    ClassificationButtonView(title: "Play Audio Back", imageName: "play.circle", backgroundColor: Color(.blue), textColor: Color(.white))
+//
+//                }
+//
+//            Button{
+//                //perform the classification
+//                }label:{
+//                    ClassificationButtonView(title: "Perform Classification", imageName: "",backgroundColor: Color(.gray), textColor: Color(.black))
+//                }
+//            }
+//        }
+//        .navigationBarTitle("Classification Page")
+//        .onAppear{
+//
+//            session = AVAudioSession.sharedInstance()
+//            session.requestRecordPermission{(  permission  )in
+//                if permission{
+//                    print("Accepted")
+//                }
+//
+//            }
+//
+//        }
+//
+//    }
+//    /* This functions allows the system to store the audio recordings and retrieve the path where they are stored*/
+//    func getDirectory() -> URL
+//    {
+//        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask )
+//        let documentDirectory   = paths[0]
+//        return documentDirectory
+//    }
+//    func playAudio()
+//    {
+//        let path = getDirectory().appendingPathComponent("AnimalSoundRecording\(numberOfRecordings).m4a")
+//        do{
+//            AudioPlayer = try AVAudioPlayer(contentsOf: path)
+//            AudioPlayer.play()
+//
+//        }catch{
+//
+//            print(error.localizedDescription)
+//        }
+//    }
+//
+//}
 
 
 
@@ -308,8 +424,20 @@ struct pageFour: View{
 struct pageFive: View{
     var body: some View{
         
-        VStack{
-            Text("Model Info").navigationBarTitle("Model Info")
+        ZStack{
+            Color.blue
+                .ignoresSafeArea()
+            Text("ML Model")
+                .frame(width: 200, height: 100, alignment: .top)
+                .position(x: 132.0, y: 180.0).foregroundColor(.white)
+                .font(.largeTitle)
+            Text("In order for the Machine Learning Algorithm to be able to use sounds and sound files, we needed to implement sound capturing into our application.  We used Apple's developer documentation and found a Sound Analisys Article describing how the application can capture sound from user input through the microphone, or how the user can upload a sound file. We used the baseline given on the artice to implement it to our application giving us our fully functional classification module for the user to utilize.").navigationBarTitle("Model Info")
+                .padding()
+                .frame(width: 300, height: 410, alignment: .center)
+                //.background(Color.blue)
+                .foregroundColor(Color.white)
+                //.cornerRadius(40.0)
+            //Color.blue
             
         }
     }
