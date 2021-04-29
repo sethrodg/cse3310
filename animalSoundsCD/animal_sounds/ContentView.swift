@@ -176,6 +176,8 @@ struct pageOne: View{
                 user = UserDefaults.standard.string(forKey: "Username")
                 pass = UserDefaults.standard.string(forKey: "Password")
                 
+                
+                
                 accountCreated = true
                 
                 
@@ -274,145 +276,158 @@ struct pageTwo: View{
 
 
 //PAGE THREE - CLASSIFICATION PAGE
-struct pageThree: View{
-    var body: some View{
-
-        VStack{
-            Text("Classification Page").navigationBarTitle("Classification Page")
-
-        }
-    }
-}
+//struct pageThree: View{
+//    var body: some View{
+//
+//        VStack{
+//            Text("Classification Page").navigationBarTitle("Classification Page")
+//
+//        }
+//    }
+//}
 
 
 
 
 //PAGE THREE - CLASSIFICATION PAGE
-//struct pageThree: View{
-//    @State var session: AVAudioSession!
-//    @State var AudioRecorder: AVAudioRecorder!
-//    @State var AudioPlayer : AVAudioPlayer!
-//
-//    @State var SoundFileName2: String = "ExampleSoundFileName.mp3"  //string should hold the sound file
-//    @State private var isRecording = false //when button clicked changes start recording to stop recordin
-//    @State var numberOfRecordings: Int = 0
-//    @State var Recordings : [URL] = []
-//
-//    var body: some View{
-//
-//
-//        NavigationView{
-//        VStack{
-//
-//            Text(SoundFileName2)
-//                .frame(width:350,height:20)
-//                .padding()
-//                .background(Color(red: 230 / 255, green: 230 / 255, blue: 230 / 255))//gives the gray color
-//                .font(.system(size:22,design:.default))
-//                .cornerRadius(8.0)
-//                .padding()
-//            Button {
-//
-//                if AudioRecorder == nil //checks if there current audio recordings happening
-//                {
-//                    numberOfRecordings += 1
-//                    //increment the numberOfRecordings
-//                    let SoundFileName = getDirectory().appendingPathComponent("AnimalSoundRecording\(numberOfRecordings).m4a")
-//                    let settings = [AVFormatIDKey: Int(kAudioFormatMPEG4AAC),AVSampleRateKey : 12000, AVNumberOfChannelsKey : 1 , AVEncoderAudioQualityKey : AVAudioQuality.high.rawValue ]
-//
-//                    do{
-//                        //Sound Recording will start
-//                        AudioRecorder = try AVAudioRecorder(url: SoundFileName, settings: settings)
-//                        AudioRecorder.record()
-//                        isRecording.toggle()
-//                    }catch{
-//                        print(error.localizedDescription)
-//
-//                    }
-//
-//                }
-//                else{
-//                    //Sound Recording will stop and be set to nil
-//                    AudioRecorder.stop()
-//                    AudioRecorder = nil
-//                    isRecording.toggle()
-//
-//                }
-//                //isRecording.toggle()
-//                }label:{
-//
-//
-//                    ClassificationButtonView(title: isRecording ? "Stop Recording": "Start Recording" , imageName: isRecording ? "stop.fill": "play.fill", backgroundColor: isRecording ? Color(.red): Color(.green),textColor: Color(.black))
-//
-//
-//
-//                }
-//
-//            Button{
-//                    playAudio()
-//                    //plays audio back
-//                }label:{
-//                    ClassificationButtonView(title: "Play Audio Back", imageName: "play.circle", backgroundColor: Color(.blue), textColor: Color(.white))
-//
-//                }
-//
-//            Button{
-//                //perform the classification
-//                }label:{
-//                    ClassificationButtonView(title: "Perform Classification", imageName: "",backgroundColor: Color(.gray), textColor: Color(.black))
-//                }
-//            }
-//        }
-//        .navigationBarTitle("Classification Page")
-//        .onAppear{
-//
-//            session = AVAudioSession.sharedInstance()
-//            session.requestRecordPermission{(  permission  )in
-//                if permission{
-//                    print("Accepted")
-//                }
-//
-//            }
-//
-//        }
-//
-//    }
-//    /* This functions allows the system to store the audio recordings and retrieve the path where they are stored*/
-//    func getDirectory() -> URL
-//    {
-//        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask )
-//        let documentDirectory   = paths[0]
-//        return documentDirectory
-//    }
-//    func playAudio()
-//    {
-//        let path = getDirectory().appendingPathComponent("AnimalSoundRecording\(numberOfRecordings).m4a")
-//        do{
-//            AudioPlayer = try AVAudioPlayer(contentsOf: path)
-//            AudioPlayer.play()
-//
-//        }catch{
-//
-//            print(error.localizedDescription)
-//        }
-//    }
-//
-//}
+struct pageThree: View{
+    @State var session: AVAudioSession!
+    @State var AudioRecorder: AVAudioRecorder!
+    @State var AudioPlayer : AVAudioPlayer!
+
+    @State var SoundFileName2: String = "ExampleSoundFileName.mp3"  //string should hold the sound file
+    @State private var isRecording = false //when button clicked changes start recording to stop recordin
+    @State var numberOfRecordings: Int = 0
+    @State var Recordings : [URL] = []
+
+    var body: some View{
+
+
+        NavigationView{
+        VStack{
+
+            Text("AnimalSoundRecording\(numberOfRecordings).m4a")
+                .frame(width:350,height:20)
+                .padding()
+                .background(Color(red: 230 / 255, green: 230 / 255, blue: 230 / 255))//gives the gray color
+                .font(.system(size:22,design:.default))
+                .cornerRadius(8.0)
+                .padding()
+            Button {
+
+                if AudioRecorder == nil //checks if there current audio recordings happening
+                {
+                    numberOfRecordings += 1
+                    //increment the numberOfRecordings
+                    let SoundFileName = getDirectory().appendingPathComponent("AnimalSoundRecording\(numberOfRecordings).m4a")
+                    let settings = [AVFormatIDKey: Int(kAudioFormatMPEG4AAC),AVSampleRateKey : 12000, AVNumberOfChannelsKey : 1 , AVEncoderAudioQualityKey : AVAudioQuality.high.rawValue ]
+
+                    do{
+                        //Sound Recording will start
+                        AudioRecorder = try AVAudioRecorder(url: SoundFileName, settings: settings)
+                        AudioRecorder.record()
+                        isRecording.toggle()
+                    }catch{
+                        print(error.localizedDescription)
+
+                    }
+
+                }
+                else{
+                    //Sound Recording will stop and be set to nil
+                    AudioRecorder.stop()
+                    AudioRecorder = nil
+                    isRecording.toggle()
+
+                }
+                //isRecording.toggle()
+                }label:{
+
+
+                    ClassificationButtonView(title: isRecording ? "Stop Recording": "Start Recording" , imageName: isRecording ? "stop.fill": "play.fill", backgroundColor: isRecording ? Color(.red): Color(.green),textColor: Color(.black))
+
+
+
+                }
+
+            Button{
+                    playAudio()
+                    //plays audio back
+                }label:{
+                    ClassificationButtonView(title: "Play Audio Back", imageName: "play.circle", backgroundColor: Color(.blue), textColor: Color(.white))
+
+                }
+
+            Button{
+                //perform the classification
+                }label:{
+                    ClassificationButtonView(title: "Perform Classification", imageName: "",backgroundColor: Color(.gray), textColor: Color(.black))
+                }
+            }
+        }
+        .navigationBarTitle("Classification Page")
+        .onAppear{
+
+            session = AVAudioSession.sharedInstance()
+            session.requestRecordPermission{(  permission  )in
+                if permission{
+                    print("Accepted")
+                }
+
+            }
+
+        }
+
+    }
+    /* This functions allows the system to store the audio recordings and retrieve the path where they are stored*/
+    func getDirectory() -> URL
+    {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask )
+        let documentDirectory   = paths[0]
+        return documentDirectory
+    }
+    func playAudio()
+    {
+        let path = getDirectory().appendingPathComponent("AnimalSoundRecording\(numberOfRecordings).m4a")
+        do{
+            AudioPlayer = try AVAudioPlayer(contentsOf: path)
+            AudioPlayer.play()
+
+        }catch{
+
+            print(error.localizedDescription)
+        }
+    }
+
+}
 
 
 
 //PAGE FOUR - PROFILE PAGE
 struct pageFour: View{
     
+    var newU = UserDefaults.standard.string(forKey: "Username")!
+    var newP = UserDefaults.standard.string(forKey: "Password")!
     
     var body: some View{
         
         
         
+        
         VStack{
             Text("Profile Page").navigationBarTitle("Profile Page")
-            Text("Username: \(myUsername)")
-            Text("Password: \(myPassword)")
+            Text("Username: \(newU)")
+//                .padding()
+//                .frame(width: 300, height: 110, alignment: .center)
+//                .background(Color.blue)
+//                .foregroundColor(Color.white)
+//                .cornerRadius(40.0)
+            Text("Password: \(newP)")
+                //.padding()
+                //.frame(width: 300, height: 410, alignment: .center)
+                //.background(Color.blue)
+                //.foregroundColor(Color.white)
+                //.cornerRadius(40.0)
 
         }
     }
@@ -475,3 +490,34 @@ struct pageSeven: View{
 }
 
 
+
+
+
+
+
+//Classification Buttons
+struct ClassificationButtonView: View{
+    var title: String
+    var imageName: String
+    var backgroundColor: Color
+    var textColor: Color
+    var body: some View{
+        ZStack(alignment:.trailing){
+            Text(title)
+                .frame(width:280,height:50)
+                .background(backgroundColor)
+                .foregroundColor(textColor)
+                .font(.system(size:20,weight:.bold ,design: .default))
+                .cornerRadius(10)
+            
+                
+            Image(systemName: imageName)
+                .renderingMode(.original)
+                .resizable()//makes it large
+                .aspectRatio(contentMode: .fit)//makes it clear image
+                .frame(width: 25,height: 25)
+                .padding()
+            
+                }
+    }
+}
