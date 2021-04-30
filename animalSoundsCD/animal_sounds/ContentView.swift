@@ -90,11 +90,11 @@ struct pageOne: View{
 //        private var items: FetchedResults<User>
 
 
-
+  
     
     var body: some View{
         
-    
+   
         
         VStack{
             
@@ -123,11 +123,14 @@ struct pageOne: View{
   
             
             NavigationLink(destination: {
+                
+           
                 VStack{
                     
                     
                     //VALIDATE LOGIN LOCALLY
-                    if user == userInput && pass == passInput {
+                    
+                    if user == userInput && pass == passInput || user == userInput && passInput == UserDefaults.standard.string(forKey: "Password")! {
                         pageTwo()
                     } else {
                         pageSeven()
@@ -153,6 +156,7 @@ struct pageOne: View{
             
             Button(action: {
                 print("Button clicked")
+                print("Current pass: \(UserDefaults.standard.string(forKey: "Password"))")
 //                user = userInput
 //                pass = passInput
                 
@@ -179,31 +183,6 @@ struct pageOne: View{
                 
                 
                 accountCreated = true
-                
-                
-                
-
-                
-                //CORE DATA CDOE
-//                let context = persistenceController.container.viewContext
-//                let newUser = NSEntityDescription.insertNewObject(forEntityName: "User", into: context) as! User
-//
-//                newUser.username = myUsername
-//                newUser.password = myPassword
-//
-//                newUser.setValue(myUsername, forKey: "username")
-//                newUser.setValue(myPassword, forKey: "password")
-//
-//                do {
-//                    try context.save()
-//                    print("New user created")
-//                    //return newUser
-//                } catch let createError{
-//                    print("Failed to create: \(createError)")
-//                }
-                
-        
-                
                 
                 
             }) {
@@ -406,8 +385,9 @@ struct pageThree: View{
 //PAGE FOUR - PROFILE PAGE
 struct pageFour: View{
     
-    var newU = UserDefaults.standard.string(forKey: "Username")!
-    var newP = UserDefaults.standard.string(forKey: "Password")!
+    @State var newU = UserDefaults.standard.string(forKey: "Username")!
+    @State var newP = UserDefaults.standard.string(forKey: "Password")!
+    @State var passChangeInput: String = ""
     
     var body: some View{
         
@@ -440,6 +420,26 @@ struct pageFour: View{
                 .foregroundColor(Color.white)
                 .cornerRadius(40.0)
                 .position(x: 192.0, y: 0.0).foregroundColor(.white)
+            
+            
+            
+            TextField("New Passord", text: $passChangeInput)
+                .padding()
+                .background(Color(red: 230 / 255, green: 230 / 255, blue: 230 / 255))
+                .cornerRadius(8.0)
+                .padding()
+            
+            Button(action: {
+      
+                newP = passChangeInput
+                UserDefaults.standard.set(self.passChangeInput, forKey: "Password")
+                
+                
+                
+            }) {
+                Text("Change Password")
+                
+            }.padding()
 
         }
     }
@@ -474,6 +474,8 @@ struct pageFive: View{
 
 //PAGE SIX - STATISTICS
 struct pageSix: View{
+    
+    
     var body: some View{
         
         VStack{
