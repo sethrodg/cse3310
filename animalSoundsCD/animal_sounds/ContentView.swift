@@ -9,10 +9,12 @@
 import SwiftUI
 import CoreData
 import AVKit
+import SoundAnalysis
+import CoreML
 
 
 
-
+var audioFileAnalyzer: SNAudioFileAnalyzer!
 public var myUsername = ""
 public var myPassword = ""
 
@@ -339,6 +341,7 @@ struct pageThree: View{
 
             Button{
                 //perform the classification
+                analyzeAudio()
                 }label:{
                     ClassificationButtonView(title: "Perform Classification", imageName: " ",backgroundColor: Color(.gray), textColor: Color(.black))
                 }
@@ -367,7 +370,7 @@ struct pageThree: View{
     }
     func playAudio()
     {
-        let path = getDirectory().appendingPathComponent("AnimalSoundRecording\(numberOfRecordings).m4a")
+        let path =  getDirectory().appendingPathComponent("AnimalSoundRecording\(numberOfRecordings).m4a")
         do{
             AudioPlayer = try AVAudioPlayer(contentsOf: path)
             AudioPlayer.play()
@@ -376,6 +379,33 @@ struct pageThree: View{
 
             print(error.localizedDescription)
         }
+    }
+    
+    
+    
+    func analyzeAudio(){
+        let path = getDirectory().appendingPathComponent("AnimalSoundRecording\(numberOfRecordings).m4a")
+        do{
+        //audioFileAnalyzer = try SNAudioFileAnalyzer(url:path)
+            audioFileAnalyzer = try SNAudioFileAnalyzer(url: path)
+        }catch{
+            
+            print(error.localizedDescription)
+        }
+        let resultsObserver = ResultsObserver()
+        //add observer class
+        do{
+        let request = try SNClassifySoundRequest(mlModel: MySoundClassifier().model)
+        try audioFileAnalyzer.add(request,withObserver:resultsObserver)
+        }catch{
+            
+            print(error.localizedDescription)
+        }
+            
+         
+        audioFileAnalyzer.analyze()
+        
+    
     }
 
 }

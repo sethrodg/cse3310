@@ -15,6 +15,9 @@
 		CE15180426266E7C00B3DEB9 /* animal_sounds.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE15180226266E7C00B3DEB9 /* animal_sounds.xcdatamodeld */; };
 		CE15180F26266E7C00B3DEB9 /* animal_soundsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE15180E26266E7C00B3DEB9 /* animal_soundsTests.swift */; };
 		CE15181A26266E7C00B3DEB9 /* animal_soundsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE15181926266E7C00B3DEB9 /* animal_soundsUITests.swift */; };
+		CE395CA4263E5008005AACBC /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE395CA3263E5008005AACBC /* Observer.swift */; };
+		CE395CB1263E52EB005AACBC /* MySoundClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = CE395CB0263E52EB005AACBC /* MySoundClassifier.mlmodel */; };
+		CE395CB6263E73FE005AACBC /* Cow-moo-sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE395CB5263E73FE005AACBC /* Cow-moo-sound.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		CE15181526266E7C00B3DEB9 /* animal_soundsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = animal_soundsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE15181926266E7C00B3DEB9 /* animal_soundsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animal_soundsUITests.swift; sourceTree = "<group>"; };
 		CE15181B26266E7C00B3DEB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE395CA3263E5008005AACBC /* Observer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Observer.swift; path = ../../../../../../Downloads/Observer.swift; sourceTree = "<group>"; };
+		CE395CB0263E52EB005AACBC /* MySoundClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = MySoundClassifier.mlmodel; path = ../../MySoundClassifier.mlmodel; sourceTree = "<group>"; };
+		CE395CB5263E73FE005AACBC /* Cow-moo-sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Cow-moo-sound.mp3"; sourceTree = "<group>"; };
 		CE7734D3262CA1020080C975 /* animal_sounds.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = animal_sounds.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,9 +109,12 @@
 				CE7734D3262CA1020080C975 /* animal_sounds.entitlements */,
 				CE1517F726266E7A00B3DEB9 /* animal_soundsApp.swift */,
 				CE1517F926266E7A00B3DEB9 /* ContentView.swift */,
+				CE395CB0263E52EB005AACBC /* MySoundClassifier.mlmodel */,
+				CE395CA3263E5008005AACBC /* Observer.swift */,
 				CE1517FB26266E7C00B3DEB9 /* Assets.xcassets */,
 				CE15180026266E7C00B3DEB9 /* Persistence.swift */,
 				CE15180526266E7C00B3DEB9 /* Info.plist */,
+				CE395CB5263E73FE005AACBC /* Cow-moo-sound.mp3 */,
 				CE15180226266E7C00B3DEB9 /* animal_sounds.xcdatamodeld */,
 				CE1517FD26266E7C00B3DEB9 /* Preview Content */,
 			);
@@ -243,6 +252,7 @@
 			files = (
 				CE1517FF26266E7C00B3DEB9 /* Preview Assets.xcassets in Resources */,
 				CE1517FC26266E7C00B3DEB9 /* Assets.xcassets in Resources */,
+				CE395CB6263E73FE005AACBC /* Cow-moo-sound.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +278,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE15180126266E7C00B3DEB9 /* Persistence.swift in Sources */,
+				CE395CB1263E52EB005AACBC /* MySoundClassifier.mlmodel in Sources */,
+				CE395CA4263E5008005AACBC /* Observer.swift in Sources */,
 				CE1517FA26266E7A00B3DEB9 /* ContentView.swift in Sources */,
 				CE1517F826266E7A00B3DEB9 /* animal_soundsApp.swift in Sources */,
 				CE15180426266E7C00B3DEB9 /* animal_sounds.xcdatamodeld in Sources */,
