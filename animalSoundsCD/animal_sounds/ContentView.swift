@@ -17,6 +17,9 @@ import CoreML
 var audioFileAnalyzer: SNAudioFileAnalyzer!
 public var myUsername = ""
 public var myPassword = ""
+public var ran = 0
+public var mlResult = ""
+public var mlConfidence = 0.0
 
 let persistenceController = PersistenceController.shared
 
@@ -342,11 +345,15 @@ struct pageThree: View{
             Button{
                 //perform the classification
                 analyzeAudio()
+                ran = 1
                 }label:{
                     ClassificationButtonView(title: "Perform Classification", imageName: " ",backgroundColor: Color(.gray), textColor: Color(.black))
                 }
             }
+            
         }
+        Text("View the results on the statistics page.")
+            .foregroundColor(.black)
         .navigationBarTitle("Classification Page")
         .onAppear{
 
@@ -404,6 +411,9 @@ struct pageThree: View{
             
          
         audioFileAnalyzer.analyze()
+        
+        mlResult = resultsObserver.classificationResult
+        mlConfidence = resultsObserver.classificationConfidence
         
     
     }
@@ -505,14 +515,43 @@ struct pageFive: View{
 //PAGE SIX - STATISTICS
 struct pageSix: View{
     
+    let percent = String(format: "%0.2f", mlConfidence)
     
     var body: some View{
         
-        VStack{
-            Text("Statistics").navigationBarTitle("Statistics")
+        
+   
+        
+        ZStack{
+            Color.blue
+                .ignoresSafeArea()
+            Text("Classification Results")
+                .frame(width: 200, height: 100, alignment: .top)
+                .position(x: 166.0, y: 180.0).foregroundColor(.white)
+                .font(.largeTitle)
+            if(ran == 1){
+                
+                
+                Text("Sound Recognized:\n\(mlResult)\n\nConfidence of the ML Model:\n\(mlConfidence, specifier: "%.2f")%\n\nClassify a new sound on the classificaiton page to update the results.").navigationBarTitle("Model Info")
+                    .padding()
+                    .frame(width: 300, height: 410, alignment: .center)
+                    //.background(Color.blue)
+                    .position(x: 191.0, y: 345.0).foregroundColor(.white)
+                    //.cornerRadius(40.0)
+                
+            }else{
+                Text("This is where you will find the results of the ML model classification after a sound has been classified. You can do this on the classification page.").navigationBarTitle("Model Info")
+                    .padding()
+                    .frame(width: 300, height: 410, alignment: .center)
+                    //.background(Color.blue)
+                    .position(x: 192.0, y: 300.0).foregroundColor(.white)
+                    //.cornerRadius(40.0)
+            }
+           
             
         }
     }
+    //ran = 1
 }
 
 
